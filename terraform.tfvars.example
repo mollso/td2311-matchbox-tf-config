@@ -1,0 +1,76 @@
+# URL for the Matchbox HTTP endpoint
+matchbox_http_endpoint = "http://example-matchbox-url:8080"
+
+# URL for the Matchbox RPC endpoint
+matchbox_rpc_endpoint = "example-matchbox-rpc-url:8081"
+
+# Operating System version
+os_version = "38.20230806.3.0"
+
+# SSH authorized key for accessing nodes
+ssh_authorized_key = "ssh-ed25519 EXAMPLE_PUBLIC_KEY"
+
+# Configuration for Master Nodes
+master_nodes = [
+  {
+    name         = "example-master01"
+    mac          = "00:00:00:00:00:01"
+    interface    = "eth0"
+    ip           = "192.168.0.1"
+    install_disk = "sda"
+  },
+  {
+    name         = "example-master02"
+    mac          = "00:00:00:00:00:02"
+    interface    = "eth0"
+    ip           = "192.168.0.2"
+    install_disk = "sda"
+  },
+  {
+    name         = "example-master03"
+    mac          = "00:00:00:00:00:03"
+    interface    = "eth0"
+    ip           = "192.168.0.3"
+    install_disk = "sda"
+  },
+]
+
+# Configuration for Worker Nodes
+worker_nodes = [
+  {
+    name         = "example-worker01"
+    mac          = "00:00:00:00:00:11"
+    interface    = "eth0"
+    ip           = "192.168.0.11"
+    install_disk = "sda"
+  },
+  {
+    name         = "example-worker02"
+    mac          = "00:00:00:00:00:12"
+    interface    = "eth0"
+    ip           = "192.168.0.12"
+    install_disk = "sda"
+  },
+  {
+    name         = "example-worker03"
+    mac          = "00:00:00:00:00:13"
+    interface    = "eth0"
+    ip           = "192.168.0.13"
+    install_disk = "sda"
+  },
+  {
+    name         = "example-worker04"
+    mac          = "00:00:00:00:00:14"
+    interface    = "eth0"
+    ip           = "192.168.0.14"
+    install_disk = "sda"
+  }
+]
+
+# Network Configuration
+network = {
+  gateway    = "192.168.0.1"
+  prefix     = "24"
+  nameserver = "8.8.8.8"
+  domain     = "example.lan"
+}
