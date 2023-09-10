@@ -47,7 +47,8 @@ data "ct_config" "master_nodes" {
     templatefile("fcc/hostname.yaml", {
       hostname = format("%s.%s", var.master_nodes[count.index].name, var.network.domain)
     }),
-    file("fcc/autologin.yaml")
+    file("fcc/autologin.yaml"),
+    file("fcc/calico.yaml")
   ]
   strict = true // Ensure strict Ignition compliance
 }

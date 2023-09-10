@@ -47,7 +47,8 @@ data "ct_config" "worker_nodes" {
     templatefile("fcc/hostname.yaml", {
       hostname = format("%s.%s", var.worker_nodes[count.index].name, var.network.domain)
     }),
-    file("fcc/autologin.yaml")
+    file("fcc/autologin.yaml"),
+    file("fcc/calico.yaml")
   ]
   strict = true // Ensure strict Ignition compliance
 }
